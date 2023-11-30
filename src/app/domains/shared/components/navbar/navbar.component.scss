@@ -1,0 +1,63 @@
+@import './../../utils/scss/index.scss';
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 82px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.logo {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  &__name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: $text-white;
+    margin: 0 0 0 8px;
+  }
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+  gap: 34px;
+}
+
+.item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $text-white;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $text-white;
+  }
+
+  &__active {
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: $text-verde;
+      border-radius: 1.5px;
+      margin-top: 8px;
+    }
+  }
+}
