@@ -1,0 +1,120 @@
+@import './../../../shared/utils/scss/index.scss';
+
+.margin {
+  height: 70px;
+  width: 100%;
+}
+
+.section {
+  height: auto;
+  width: 100%;
+
+
+
+  &__title {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 41px;
+    margin: -41px 0 56px 118px;
+    color: $text-verde;
+    justify-self: start;
+  }
+
+  &__pipe {
+    margin: 104px 0 48px 0;
+
+    @include for-phone-only {
+      display: none;
+    }
+
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+}
+
+.projects {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+
+
+  &__title {
+    width: 100%;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 41px;
+    margin: 48px 0 64px 0;
+    color: $text-verde;
+    justify-self: start;
+    text-align: center;
+  }
+
+  &__pipe {
+    margin: 104px 0 48px 0;
+
+    @include for-phone-only {
+      display: none;
+    }
+
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+}
+
+.container-projects {
+  height: auto;
+  max-width: 1044px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 16px;
+
+  @include for-tablet-portrait-up {
+    justify-content: center;
+  }
+
+}
+
+.videos {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+
+  &__title {
+    width: 100%;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 41px;
+    margin: 48px 0 64px 118px;
+    color: $text-verde;
+    justify-self: start;
+  }
+
+  &__pipe {
+    margin: 104px 0 48px 0;
+
+    @include for-phone-only {
+      display: none;
+    }
+
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+}
