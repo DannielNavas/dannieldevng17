@@ -1,0 +1,59 @@
+@import './../../utils/scss/index.scss';
+
+.card {
+  height: 322px;
+  width: 308px;
+  padding: 0 0 0 29px;
+}
+
+.projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+
+  width: 245px;
+
+  &__title {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin: 0 0 8px 0;
+  }
+
+  &__date {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: $text-verde;
+    margin: 0 0 32px 0;
+  }
+
+  &__description {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin: 0 0 0 0;
+    height: 180px;
+    overflow: hidden;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
