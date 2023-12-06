@@ -1,0 +1,26 @@
+@import './../../../shared/utils/scss/index.scss';
+
+h1 {
+  height: auto;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.section {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 16px;
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: $text-white;
+    margin: 0 0 24px 0;
+    margin: 64px 0;
+  }
+}

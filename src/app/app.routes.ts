@@ -8,4 +8,11 @@ export const routes: Routes = [
         (m) => m.LandingComponent
       ),
   },
+  {
+    path: 'projects',
+    loadComponent: () =>
+      import(
+        './domains/projects/pages/project-page/project-page.component'
+      ).then((m) => m.ProjectPageComponent),
+  },
 ];
