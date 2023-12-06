@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IPost } from '@domain/shared/models/post.interface';
+import { environment } from '@env/environment';
 import { Observable, map } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { IPost } from '../../models/post.interface';
 
 @Injectable({
   providedIn: 'root',
