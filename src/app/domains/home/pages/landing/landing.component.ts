@@ -1,4 +1,8 @@
 import { Component, inject, signal } from '@angular/core';
+import { PostsComponent } from '@domain/shared/components/posts/posts.component';
+import { ProjectsComponent } from '@domain/shared/components/projects/projects.component';
+import { StatisticsComponent } from '@domain/shared/components/statistics/statistics.component';
+import { VideosComponent } from '@domain/shared/components/videos/videos.component';
 import { IPost } from '../../../shared/models/post.interface';
 import { IResponseGithub } from '../../../shared/models/response-github.interface';
 import { IResponseYoutube } from '../../../shared/models/response-youtube';
@@ -12,7 +16,13 @@ import { HeaderComponent } from '../../components/header/header.component';
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [
+    HeaderComponent,
+    PostsComponent,
+    ProjectsComponent,
+    VideosComponent,
+    StatisticsComponent,
+  ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss',
 })
