@@ -9,7 +9,9 @@ import { NavbarComponent } from './domains/shared/components/navbar/navbar.compo
   standalone: true,
   imports: [CommonModule, RouterOutlet, NavbarComponent, FooterComponent],
   template: `<div class="container">
-    <app-navbar /> <router-outlet /> <app-footer />
+    <app-navbar />
+    <router-outlet />
+    <app-footer />
   </div>`,
   styles: `.container {
   width: 100%;
