@@ -1,0 +1,86 @@
+@import './../../utils/scss/index.scss';
+
+.card {
+  max-width: 1044px;
+  width: 100%;
+  min-height: 165px;
+  height: auto;
+  background: $text-white;
+  border-radius: 12px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 auto 16px auto;
+
+
+}
+
+.images {
+  width: 385px;
+  display: flex;
+  height: 165px;
+  align-items: center;
+  justify-content: space-around;
+
+  &__post {
+    width: 335px;
+    height: 109px;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+  }
+
+  &__pipe {
+    @include for-phone-only {
+      display: none;
+    }
+
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 643px;
+  width: 100%;
+  max-height: 165px;
+  height: auto;
+  justify-content: center;
+
+  @include for-phone-only {
+    padding: 0 16px 16px 16px;
+  }
+
+  @include for-tablet-portrait-up {
+    max-width: 435px;
+  }
+
+  &__title {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: $text-black;
+    margin: 0;
+    max-width: 568px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+    color: $text-black;
+    max-width: 582px;
+    width: 100%;
+    max-height: 72px;
+    height: auto;
+  }
+}

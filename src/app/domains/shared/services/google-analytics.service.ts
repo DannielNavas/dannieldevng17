@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { environment } from '@env/environment';
 import { filter } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const gtag: any;

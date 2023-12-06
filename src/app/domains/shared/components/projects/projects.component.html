@@ -1,0 +1,21 @@
+<article class="card">
+  <div class="projects">
+    <div class="information">
+      <h1 class="information__title">{{ project.name }}</h1>
+      <time class="information__date">{{ project.created_at | date }}</time>
+      <p class="information__description">
+        {{ project.description }}
+      </p>
+    </div>
+    <img src="/assets/image/pipe-projects.svg" loading="lazy" alt="pipe projects" class="projects_pipe">
+  </div>
+  <div class="actions">
+    <img src="/assets/image/github.webp" loading="lazy" alt="github project"
+      (click)="goGeneric(project.name, project.html_url)" />
+    @if (project.homepage) {
+    <img src="/assets/image/shared.webp" loading="lazy" alt="shared project"
+      (click)="goGeneric(project.name, project.homepage)" />
+    }
+    <img src="" alt="" />
+  </div>
+</article>
