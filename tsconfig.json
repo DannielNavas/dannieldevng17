@@ -21,7 +21,27 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@domain/certificates/*": [
+        "./src/app/domains/certificates/*"
+      ],
+      "@domain/home/*": [
+        "./src/app/domains/home/*"
+      ],
+      "@domain/post/*": [
+        "./src/app/domains/post/*"
+      ],
+      "@domain/projects/*": [
+        "./src/app/domains/projects/*"
+      ],
+      "@domain/shared/*": [
+        "./src/app/domains/shared/*"
+      ],
+      "@env/*": [
+        "./src/environments/*"
+      ]
+    },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
