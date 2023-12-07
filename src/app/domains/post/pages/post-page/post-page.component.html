@@ -1,0 +1,6 @@
+<section class="section">
+  <h1 class="section__title">Articulos</h1>
+  @for (article of articles(); track article.id) {
+  <app-posts [article]="article" />
+  }
+</section>

@@ -1,0 +1,16 @@
+@import './../../../shared/utils/scss/index.scss';
+
+.section {
+  height: auto;
+  width: 100%;
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: $text-white;
+    margin: 0 0 24px 0;
+    margin: 64px 0;
+  }
+}

@@ -15,4 +15,11 @@ export const routes: Routes = [
         './domains/projects/pages/project-page/project-page.component'
       ).then((m) => m.ProjectPageComponent),
   },
+  {
+    path: 'blog',
+    loadComponent: () =>
+      import('./domains/post/pages/post-page/post-page.component').then(
+        (m) => m.PostPageComponent
+      ),
+  },
 ];
