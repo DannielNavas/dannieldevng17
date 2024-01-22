@@ -1,0 +1,33 @@
+// markdown {
+//   color: #fff;
+// }
+
+:host ::ng-deep h1 {
+  color: #3498db;
+  /* Color azul para los encabezados h1 */
+}
+
+:host ::ng-deep h2 {
+  color: #2ecc71;
+  /* Color verde para los encabezados h2 */
+}
+
+
+:host ::ng-deep p {
+  color: #FFF;
+  /* Color verde para los encabezados h2 */
+}
+
+:host ::ng-deep a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  /* Color verde para los encabezados h2 */
+}
+
+:host ::ng-deep img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
