@@ -7,7 +7,14 @@
   align-items: center;
   height: 82px;
   width: 100%;
-  margin-top: 40px;
+
+  @include for-desktop-up {
+    margin-top: 40px;
+  }
+
+  @include for-tablet-portrait-up {
+    margin-top: 24px;
+  }
 }
 
 .logo {
@@ -32,6 +39,52 @@
   padding: 0;
   margin: 0;
   gap: 34px;
+
+  @include for-phone-only {
+    display: none;
+  }
+}
+
+.menu-movile {
+  position: absolute;
+  height: 300px;
+  width: 250px;
+  background: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  right: 16px;
+  border-radius: 16px;
+  list-style-type: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  @include for-desktop-up {
+    display: none;
+  }
+
+  @include for-tablet-portrait-up {
+    display: none;
+  }
+
+  li a {
+    text-decoration: none;
+    color: $text-black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 16px 0 16px 16px;
+  }
+}
+
+.icon-movile-menu {
+  @include for-desktop-up {
+    display: none;
+  }
+
+  @include for-tablet-portrait-up {
+    display: none;
+  }
 }
 
 .item {
