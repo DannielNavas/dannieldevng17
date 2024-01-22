@@ -22,4 +22,11 @@ export const routes: Routes = [
         (m) => m.PostPageComponent
       ),
   },
+  {
+    path: 'article',
+    loadComponent: () =>
+      import('./domains/post/pages/article/article.component').then(
+        (m) => m.ArticleComponent
+      ),
+  },
 ];
