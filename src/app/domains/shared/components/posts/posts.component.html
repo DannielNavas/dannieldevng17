@@ -1,7 +1,7 @@
-<article class="card" (click)="goToArticle(article.title, article.canonical_url)">
+<article class="card" (click)="goToArticle(article.title, article.canonical_url)" routerLink="/article" [queryParams]="{ id: article.id}">
   <div class="images">
-    <img [src]="article.cover_image" [alt]="article.title" class="images__post" loading="lazy" />
-    <img src="/assets/image/pipe-post.svg" alt="pipe posts" loading="lazy" class="images__pipe" />
+    <img [src]="article.cover_image" [alt]="article.title" class="images__post" ngOptimizedImage />
+    <img src="/assets/image/pipe-post.svg" alt="pipe posts" ngOptimizedImage class="images__pipe" />
   </div>
   <div class="container">
     <h2 class="container__title">{{ article.title }}</h2>
