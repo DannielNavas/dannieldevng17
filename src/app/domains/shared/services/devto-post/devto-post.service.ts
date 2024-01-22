@@ -19,4 +19,8 @@ export class DevtoPostService {
   allArticles(): Observable<IPost[]> {
     return this.http.get<IPost[]>(environment.devto);
   }
+
+  article(id: string): Observable<IPost> {
+    return this.http.get<IPost>(`https://dev.to/api/articles/${id}`);
+  }
 }
