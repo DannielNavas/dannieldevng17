@@ -84,6 +84,10 @@
     justify-content: center;
   }
 
+  @include for-phone-only {
+    justify-content: center;
+  }
+
 }
 
 .videos {
