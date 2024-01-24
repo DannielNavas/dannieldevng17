@@ -3,7 +3,7 @@
     <img src="/assets/image/logo.svg" />
     <p class="logo__name">Danniel Dev</p>
   </div>
-  <div class="icon-movile-menu">
+  <div class="icon-movile-menu" (click)="openMenu()">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
       <g fill="none">
         <path
@@ -33,34 +33,36 @@
       </a>
     </li>
     <img src="/assets/image/pipe-nav.svg" alt="pipe" loading="lazy" style="height: 90px;">
-    <li class="item">
+    <!-- <li class="item">
       <a routerLink="/certificates" routerLinkActive="item__active" routerLinkActive="{ exact: true }">
         Certificados
       </a>
-    </li>
-    <img src="/assets/image/pipe-nav.svg" alt="pipe" loading="lazy" style="height: 90px;">
+    </li> -->
   </menu>
 </nav>
 
-<menu class="menu-movile">
-  <li>
-    <a routerLink="/" routerLinkActive="item__active" routerLinkActive="{ exact: true }">
-      Inicio
-    </a>
-  </li>
-  <li >
-    <a routerLink="/blog" routerLinkActive="item__active" routerLinkActive="{ exact: true }">
-      Posts
-    </a>
-  </li>
-  <li >
-    <a routerLink="/projects" routerLinkActive="item__active" routerLinkActive="{ exact: true }">
-      Proyectos
-    </a>
-  </li>
-  <li >
-    <a routerLink="/certificates" routerLinkActive="item__active" routerLinkActive="{ exact: true }">
-      Certificados
-    </a>
-  </li>
-</menu>
+@if (isOpen) {
+  <menu class="menu-movile">
+    <li>
+      <a routerLink="/" routerLinkActive="item__active" routerLinkActive="{ exact: true }" (click)="isOpen = !isOpen">
+        Inicio
+      </a>
+    </li>
+    <li>
+      <a routerLink="/blog" routerLinkActive="item__active" routerLinkActive="{ exact: true }" (click)="isOpen = !isOpen">
+        Posts
+      </a>
+    </li>
+    <li>
+      <a routerLink="/projects" routerLinkActive="item__active" routerLinkActive="{ exact: true }" (click)="isOpen = !isOpen">
+        Proyectos
+      </a>
+    </li>
+    <!-- <li >
+      <a routerLink="/certificates" routerLinkActive="item__active" routerLinkActive="{ exact: true }">
+        Certificados
+      </a>
+    </li> -->
+  </menu>
+
+}

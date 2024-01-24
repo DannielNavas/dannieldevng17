@@ -8,4 +8,10 @@ import { RouterLinkActive, RouterLinkWithHref } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  isOpen = false;
+
+  openMenu(): void {
+    this.isOpen = !this.isOpen;
+  }
+}
