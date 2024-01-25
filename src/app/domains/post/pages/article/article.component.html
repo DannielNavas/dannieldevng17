@@ -1,2 +1,15 @@
-<markdown lineNumbers  [data]="response?.body_markdown" ngPreserveWhitespaces>
-</markdown>
+<main class="container">
+  <section class="article">
+    <h1 class="article__title">{{ response?.title }}</h1>
+    <markdown lineNumbers [data]="response?.body_markdown" ngPreserveWhitespaces>
+    </markdown>
+    <div class="informacion">
+      <article class="card">
+
+      </article>
+      <article class="card">
+
+      </article>
+    </div>
+  </section>
+</main>
