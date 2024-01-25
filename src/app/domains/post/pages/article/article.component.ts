@@ -1,4 +1,5 @@
 import { Component, Input, inject } from '@angular/core';
+import { Article } from '@domain/shared/models/article.interface';
 import { DevtoPostService } from '@domain/shared/services/devto-post/devto-post.service';
 import { MarkdownModule } from 'ngx-markdown';
 
@@ -13,7 +14,7 @@ import { MarkdownModule } from 'ngx-markdown';
 export class ArticleComponent {
   @Input() id?: string;
   private devtoPostService = inject(DevtoPostService);
-  response: any;
+  response!: Article;
 
   ngOnInit(): void {
     this.getArticle();
