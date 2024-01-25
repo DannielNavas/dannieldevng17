@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Article } from '@domain/shared/models/article.interface';
 import { IPost } from '@domain/shared/models/post.interface';
 import { environment } from '@env/environment';
 import { Observable, map } from 'rxjs';
@@ -20,7 +21,7 @@ export class DevtoPostService {
     return this.http.get<IPost[]>(environment.devto);
   }
 
-  article(id: string): Observable<IPost> {
-    return this.http.get<IPost>(`https://dev.to/api/articles/${id}`);
+  article(id: string): Observable<Article> {
+    return this.http.get<Article>(`https://dev.to/api/articles/${id}`);
   }
 }
