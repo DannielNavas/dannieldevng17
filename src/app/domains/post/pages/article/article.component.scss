@@ -12,9 +12,18 @@
   /* Color verde para los encabezados h2 */
 }
 
+:host ::ng-deep strong {
+  text-decoration: underline;
+}
 
 :host ::ng-deep p {
   color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  line-height: 22px;
+  margin: 0;
   /* Color verde para los encabezados h2 */
 }
 
@@ -29,6 +38,40 @@
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+:host ::ng-deep ol {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+:host ::ng-deep ul {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+:host ::ng-deep ol>li {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 4px;
+}
+
+:host ::ng-deep ul>li {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 4px;
 }
 
 .container {
@@ -61,6 +104,7 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+  margin-top: 48px;
 }
 
 .card {
@@ -70,7 +114,35 @@
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  height: 250px;
+  height: 306px;
   width: calc(50% - 8px);
   padding: 16px;
+
+  &__space {
+    margin-top: 19px;
+  }
+}
+
+.public {
+  &__date {
+    text-transform: capitalize;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+}
+
+.chip {
+  height: auto;
+  width: auto;
+  padding: 6px;
+  border: 1px solid whitesmoke;
+  border-radius: 6px;
+
+  &__text {
+    margin: 0;
+  }
 }
