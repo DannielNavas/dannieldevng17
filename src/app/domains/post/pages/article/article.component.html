@@ -3,13 +3,29 @@
     <h1 class="article__title">{{ response?.title }}</h1>
     <markdown lineNumbers [data]="response?.body_markdown" ngPreserveWhitespaces>
     </markdown>
-    <div class="informacion">
+    <aside class="informacion">
       <article class="card">
+        <h2>Acerca de mi</h2>
+        <p>¡Hola y gracias por visitar! Mi nombre es Danniel Navas, y es sitio es mi memoria.</p>
 
+        <p class="card__space">Soy desarrollador de software con 10+ de experiencia. Este sitio está y siempre ha estado libre de anuncios.</p>
       </article>
       <article class="card">
-
+        <h2>Detalle de la publicación</h2>
+        <p class="public"><b>Publicado el: </b> <span class="public__date">{{ response?.created_at | date: 'MMMM yyyy' }}</span></p>
+        <p class="public"><b>Reacciones: </b> <span class="public__date">{{ response?.public_reactions_count }}</span>
+        </p>
+        <p class="public"><b>Comentarios: </b> <span class="public__date">{{ response?.comments_count }}</span>
+        </p>
+        <h2>Etiquetas</h2>
+        <div class="tags">
+          @for (tag of response?.tags; track response.id) {
+          <div class="chip">
+            <p class="chip__text">{{tag}}</p>
+          </div>
+          }
+        </div>
       </article>
-    </div>
+    </aside>
   </section>
 </main>
