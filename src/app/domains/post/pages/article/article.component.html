@@ -1,7 +1,7 @@
 <main class="container">
   <section class="article">
-    <h1 class="article__title">{{ response?.title }}</h1>
-    <markdown lineNumbers [data]="response?.body_markdown" ngPreserveWhitespaces>
+    <h1 class="article__title">{{ response.title }}</h1>
+    <markdown lineNumbers [data]="response.body_markdown" ngPreserveWhitespaces>
     </markdown>
     <aside class="informacion">
       <article class="card">
@@ -12,14 +12,14 @@
       </article>
       <article class="card">
         <h2>Detalle de la publicación</h2>
-        <p class="public"><b>Publicado el: </b> <span class="public__date">{{ response?.created_at | date: 'MMMM yyyy' }}</span></p>
-        <p class="public"><b>Reacciones: </b> <span class="public__date">{{ response?.public_reactions_count }}</span>
+        <p class="public"><b>Publicado el: </b> <span class="public__date">{{ response.created_at | date: 'MMMM yyyy' }}</span></p>
+        <p class="public"><b>Reacciones: </b> <span class="public__date">{{ response.public_reactions_count }}</span>
         </p>
-        <p class="public"><b>Comentarios: </b> <span class="public__date">{{ response?.comments_count }}</span>
+        <p class="public"><b>Comentarios: </b> <span class="public__date">{{ response.comments_count }}</span>
         </p>
         <h2>Etiquetas</h2>
         <div class="tags">
-          @for (tag of response?.tags; track response.id) {
+          @for (tag of response.tags; track response.id) {
           <div class="chip">
             <p class="chip__text">{{tag}}</p>
           </div>
