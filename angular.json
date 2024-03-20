@@ -52,6 +52,9 @@
               "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css",
               "node_modules/prismjs/plugins/command-line/prism-command-line.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/app/domains/shared/utils/scss"]
+            },
             "scripts": [
               "node_modules/prismjs/prism.js",
               "node_modules/prismjs/components/prism-csharp.min.js",

@@ -14,7 +14,7 @@ import { NavbarComponent } from './domains/shared/components/navbar/navbar.compo
     <app-footer />
   </div>`,
   styles: `
-  @import './domains/shared/utils/scss/index.scss';
+  @import 'index.scss';
   .container {
     width: 100%;
     max-width: 1280px;
